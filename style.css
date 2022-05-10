@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap');
+
+
+/* Global */
+*{
+box-sizing: border-box;
+padding: 0;
+margin: 0;
+font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, a, .icon, span{
+  color:rgb(173, 139, 3);
+}
+
+/* navigation bar and logo */
+
+#header{
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  background-color: rgb(255, 255, 255);
+  padding:10px 60px;
+  width: 100%;
+  top:0;
+}
+
+
+#header-img{
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+ul{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+li{
+  margin: 0 10px;
+  font-size: 20px;
+  
+}
+
+a{
+  text-decoration: none;
+  
+  transition: ease-in-out 300ms;
+}
+
+a:hover{
+  color: rgb(126, 8, 0);
+}
+
+/* Email */
+
+body{
+  text-align: center;
+}
+
+.title{
+  margin: 60px 0 20px 0;
+}
+
+.button{
+  background-color: rgb(173, 139, 3);
+  padding: 5px 20px;
+  text-decoration: none;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  margin: 20px 0;
+  transition: ease-in-out 300ms;
+}
+
+.button:hover{
+  background-color: rgb(126, 8, 0);
+}
+
+
+/* Features  */
+.icon_mat{grid-area: icon1;}
+.icon_shi{grid-area: icon2;}
+.icon_ass{grid-area: icon3;}
+.materials{grid-area: materials;}
+.shipping{grid-area: shipping;}
+.assurance{grid-area: assurance;}
+
+#features{
+  display: grid;
+  grid-template-areas:
+  'icon1  icon2 icon3'
+  'materials shipping assurance' 
+}
+
+
+.feature{
+  margin: 80px 0;
+  }
+
+
+/* video */
+
+#video{
+  margin-bottom: 40px;
+}
+
+
+/* pricing */
+
+#pricing {
+  display: grid;
+  grid-template-columns: 20% 20% 20%;
+  gap: 5px;
+  justify-content: center;
+}
+
+
+.pricing{
+  border: 5px solid black;
+}
+
+.gray{
+  background-color: gray;
+  padding: 20px 0;
+}
+
+button{
+  background-color: rgb(173, 139, 3);
+  border: none;
+  padding: 5px 20px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+footer {
+  margin-top: 30px;
+  background-color: rgb(101, 101, 101);
+  padding: 20px;
+}
+
+footer > ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer > ul > li {
+  padding: 0 10px;
+}
+
+span {
+  margin-top: 5px;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+@media (max-width: 800px)
+{
+  #video{
+    width:400px
+  }
+  #pricing {
+    grid-template-columns: 1fr 1fr;
+    
+  }
+  #features{
+    grid-template-areas:
+    'icon1  icon2 '
+    'materials shipping '
+    'icon3 assurance' 
+  }
+
+}
+
+@media (max-width: 550px)
+{
+ 
+  #pricing {
+
+    grid-template-columns: 1fr;
+    
+  }
+  #features{
+    display: grid;
+    grid-template-areas:
+    'icon1 '
+    'materials '
+  }
+
+}
